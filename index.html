@@ -12,18 +12,19 @@
 <body>
 
 <header class="navbar">
-  <h1 class="logo">Vylocis Portfolio</h1>
+  <h1 class="logo">VYLOCIS PORTFOLIO</h1>
 </header>
 
 <section class="hero">
-  <div class="hero-content">
-    <h2>Minecraft Server Developer</h2>
-    <p>Survival • Lifesteal • Plugin Configurations</p>
+  <div class="hero-box">
+    <h1 class="main-title">VYLOCIS</h1>
+    <p class="subtitle">Minecraft Server Developer</p>
+    <p class="desc">I build smooth, optimized Survival & Lifesteal servers with clean plugin setups.</p>
   </div>
 </section>
 
 <section class="section">
-  <h2>My Services</h2>
+  <h2>MY SERVICES</h2>
   <div class="cards">
     <div class="card">Full Server Setup</div>
     <div class="card">Plugin Configuration</div>
@@ -33,7 +34,7 @@
 </section>
 
 <section class="section dark">
-  <h2>My Work</h2>
+  <h2>MY WORK</h2>
   <div class="gallery">
     <img src="spawn-main.png">
     <img src="spawn-npcs.png">
@@ -45,7 +46,7 @@
 </section>
 
 <section class="section">
-  <h2>Contact</h2>
+  <h2>CONTACT</h2>
   <p>Discord: <strong>vylocis</strong></p>
   <p>Email: <strong>vylocis.buisness@gmail.com</strong></p>
 </section>
@@ -54,24 +55,20 @@
   <img id="popup-img">
 </div>
 
-<footer>
-  <p>© 2026 Vylocis</p>
-</footer>
-
 <script>
 const popup = document.getElementById("popup");
 const popupImg = document.getElementById("popup-img");
 
 document.querySelectorAll(".gallery img").forEach(img => {
-  img.addEventListener("click", () => {
+  img.onclick = () => {
     popup.style.display = "flex";
     popupImg.src = img.src;
-  });
+  };
 });
 
-popup.addEventListener("click", () => {
+popup.onclick = () => {
   popup.style.display = "none";
-});
+};
 </script>
 
 </body>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vylocis Portfolio</title>
+
+  <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h1 class="logo">Vylocis Portfolio</h1>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Minecraft Server Developer</h2>
+    <p>Survival • Lifesteal • Plugin Configurations</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>My Services</h2>
+  <div class="cards">
+    <div class="card">Full Server Setup</div>
+    <div class="card">Plugin Configuration</div>
+    <div class="card">Survival Setup</div>
+    <div class="card">Lifesteal Setup</div>
+  </div>
+</section>
+
+<section class="section dark">
+  <h2>My Work</h2>
+  <div class="gallery">
+    <img src="spawn-main.png">
+    <img src="spawn-npcs.png">
+    <img src="spawn-wide.png">
+    <img src="spawn-angle.png">
+    <img src="spawn-side.png">
+    <img src="kits-gui.png">
+  </div>
+</section>
+
+<section class="section">
+  <h2>Contact</h2>
+  <p>Discord: <strong>vylocis</strong></p>
+  <p>Email: <strong>vylocis.buisness@gmail.com</strong></p>
+</section>
+
+<div id="popup">
+  <img id="popup-img">
+</div>
+
+<footer>
+  <p>© 2026 Vylocis</p>
+</footer>
+
+<script>
+const popup = document.getElementById("popup");
+const popupImg = document.getElementById("popup-img");
+
+document.querySelectorAll(".gallery img").forEach(img => {
+  img.addEventListener("click", () => {
+    popup.style.display = "flex";
+    popupImg.src = img.src;
+  });
+});
+
+popup.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+</script>
+
+</body>
+</html>
